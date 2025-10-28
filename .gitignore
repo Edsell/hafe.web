@@ -1,0 +1,9 @@
+node_modules/
+dist/
+build/
+.cache/
+*.log
+vendor/
+composer.lock
+.env
+*.env
