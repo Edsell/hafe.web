@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\BlogCategory;
+use function seoMeta;
 use DB;
 
 class HomeController extends Controller
 {
+
     function Home() {
 
         $Slider = DB::table('sliders')
@@ -69,10 +71,14 @@ class HomeController extends Controller
 
         $WhyUs = DB::table('whies')->get();
 
+        $AboutTitleHere = $About->value('Title');
+        $AboutDetailsHere = $About->value('Details');
+        $AboutImageHere = $About->value('Image');
+
         $meta = seoMeta(
-            $About->Title,
-            $About->Details,
-            asset($About->Image),
+            $AboutTitleHere,
+            $AboutDetailsHere,
+            asset($AboutImageHere),
             route('AboutPage')
         );
 
@@ -213,6 +219,8 @@ class HomeController extends Controller
             ->get();
 
             $BlogNameHere = $blogsRaw->value('Name');
+            $BlogDetailsHere = $blogsRaw->value('Details');
+            $BlogImageHere = $blogsRaw->value('Image');
 
         $Blogs = $blogsRaw->groupBy('id')->map(function($items) {
             $blog = $items->first();
@@ -250,9 +258,9 @@ class HomeController extends Controller
         $commentsCount = $comments->count();
 
         $meta = seoMeta(
-            $blogsRaw->Name,
-            $blogsRaw->Details,
-            asset($blogsRaw->Image),
+            $BlogNameHere,
+            $BlogDetailsHere,
+            asset($BlogImageHere),
             route('BlogDetails', $slug)
         );
 

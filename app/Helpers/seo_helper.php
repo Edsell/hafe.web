@@ -1,16 +1,17 @@
 <?php
 
+use Illuminate\Support\Str;
+
 if (!function_exists('seoMeta')) {
-    function seoMeta($title, $description = '', $image = '', $url = '')
+    function seoMeta(string $title, ?string $description = '', ?string $image = '', ?string $url = ''): array
     {
         $defaultImage = asset('uploads/logo.png');
-        $meta = [
-            'title' => $title,
-            'description' => strip_tags(Str::limit($description, 160)),
-            'image' => $image ?: $defaultImage,
-            'url' => $url ?: url()->current(),
-        ];
 
-        return $meta;
+        return [
+            'title'       => $title ?: 'HAFE Pre & Primary School',
+            'description' => Str::limit(strip_tags((string) $description), 160),
+            'image'       => $image ?: $defaultImage,
+            'url'         => $url ?: url()->current(),
+        ];
     }
 }

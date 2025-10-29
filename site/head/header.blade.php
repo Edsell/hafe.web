@@ -25,6 +25,9 @@
         </script>
 
 
+        <link rel="alternate" href="{{ url()->current() }}" hreflang="en" />
+        <link rel="alternate" href="{{ url()->current() }}" hreflang="sw" />
+
 
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">

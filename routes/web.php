@@ -6,6 +6,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\PromoController;
 use App\Http\Controllers\DeleteController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\ContactController;
@@ -14,6 +15,26 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BlogCommentController;
 use App\Http\Controllers\GeneralSettingsController;
 use App\Http\Controllers\StudentApplicationController;
+
+use Spatie\Sitemap\Sitemap;
+use Spatie\Sitemap\Tags\Url;
+use App\Models\Blogs;
+
+Route::get('http://hafeschool.com/sitemap.xml', function () {
+    $sitemap = Sitemap::create()
+        ->add(Url::create('/')->setPriority(1.0))
+        ->add(Url::create('/about')->setPriority(0.9))
+        ->add(Url::create('/blogs')->setPriority(0.8));
+
+    foreach (Blogs::all() as $blog) {
+        $sitemap->add(Url::create(route('BlogDetails', $blog->slug))->setLastModificationDate($blog->updated_at));
+    }
+
+    $sitemap->writeToFile(public_path('sitemap.xml'));
+    return response()->file(public_path('sitemap.xml'));
+});
+
+
 
 Route::get('/', [HomeController::class, 'Home'])->name('Home');
 Route::get('/about-us', [HomeController::class, 'AboutPage'])->name('AboutPage');
@@ -32,6 +53,7 @@ Route::get('/apply/thank-you', [StudentApplicationController::class, 'thankyou']
 
 // Route::get('/contact', [ContactController::class, 'show'])->name('contact.show');
 Route::post('/contact', [ContactController::class, 'submit'])->name('contact.submit');
+
 
 
 
