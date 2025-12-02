@@ -27,7 +27,7 @@
                 <div class="bd-promotion-counter-wrapper mb-40">
                    <div class="bd-promotion-counter">
                       <div class="bd-promotion-counter-number">
-                         <p><span class="counter">14</span>+</p>
+                         <p><span class="counter">3</span>+</p>
                       </div>
                       <div class="bd-promotion-counter-text">
                          <span>Years of</span>
@@ -36,7 +36,7 @@
                    </div>
                    <div class="bd-promotion-counter">
                       <div class="bd-promotion-counter-number">
-                         <p><span><span class="counter">7</span>K</span>+</p>
+                         <p><span><span class="counter">50</span></span>+</p>
                       </div>
                       <div class="bd-promotion-counter-text">
                          <span>Students</span>
@@ -45,7 +45,7 @@
                    </div>
                    <div class="bd-promotion-counter">
                       <div class="bd-promotion-counter-number">
-                         <p><span class="counter">15</span>+</p>
+                         <p><span class="counter">5</span>+</p>
                       </div>
                       <div class="bd-promotion-counter-text">
                          <span>Award</span>
