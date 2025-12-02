@@ -25,9 +25,9 @@
               <th width="25%">Blog</th>
               <th width="15%">Name</th>
               <th width="20%">Email</th>
-              <th width="20%">Excerpt</th>
+              <th width="20%">View</th>
               <th width="10%">Status</th>
-              <th width="10%">When</th>
+              <!-- <th width="10%">When</th> -->
               <th width="10%">Action</th>
             </tr>
           </thead>
@@ -48,7 +48,7 @@
                 </td>
 
                 <td>
-                  {{ \Illuminate\Support\Str::limit($c->content, 90) }}
+                  <!-- {{ \Illuminate\Support\Str::limit($c->content, 90) }} -->
                   <a href="#ViewComment{{ $c->id }}" data-bs-toggle="modal" class="btn btn-primary btn-sm ms-1">
                     <i class="bx bx-book"></i>
                   </a>
@@ -62,9 +62,9 @@
                   @endif
                 </td>
 
-                <td>
+                <!-- <td>
                   {{ \Carbon\Carbon::parse($c->created_at)->format('d M Y H:i') }}
-                </td>
+                </td> -->
 
                 <td>
                   <div class="btn-group" role="group">
@@ -82,10 +82,10 @@
                         </form>
                       @endif
 
-                      <a class="dropdown-item bg-info"
+                      <!-- <a class="dropdown-item bg-info"
                          href="{{ route('UpdateComment',['id'=>$c->id]) }}">
                         <i class="bx bx-edit"></i> Edit
-                      </a>
+                      </a> -->
 
                       <a class="dropdown-item bg-danger" href="#deleteModal" data-bs-toggle="modal"
                          data-route="{{ route('UpdateComment', $c->id) }}"

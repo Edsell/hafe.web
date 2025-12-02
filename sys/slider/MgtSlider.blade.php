@@ -15,8 +15,8 @@
                     <tr>
                         <th width="20%">Image</th>
                         <th width="20%">Phrase</th>
-                        <th width="20%">Span</th>
-                        <th width="20%">Text</th>
+                        <th width="20%">Phrase 2</th>
+                        <th width="20%">Description</th>
                         <th width="10%">Status</th>
                         <th width="10%">Action</th>
                     </tr>

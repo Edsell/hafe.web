@@ -8,15 +8,15 @@
             <input type="hidden" name="id" value="{{ $slider->id }}" id="">
             <input type="hidden" name="TableName" value="sliders" id="">
             <div class="mb-3">
-                <label>Phrase</label>
+                <label>Phrase 1</label>
                 <input type="text" name="Phrase" value="{{ $slider->Phrase }}" class="form-control" required>
             </div>
             <div class="mb-3">
-                <label>Span</label>
+                <label>Phrase 2</label>
                 <input type="text" name="Span" value="{{ $slider->Span }}" class="form-control" required>
             </div>
             <div class="mb-3">
-                <label>Text</label>
+                <label>Description</label>
                 <input type="text" name="Text" value="{{ $slider->Text }}" class="form-control" required>
             </div>
             <div class="mb-3">

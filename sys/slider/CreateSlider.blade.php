@@ -4,15 +4,15 @@
         <form action="{{ route('CreateSliderForm') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="mb-3">
-                <label>Phrase</label>
+                <label>Phrase 1</label>
                 <input type="text" name="Phrase" class="form-control" required>
             </div>
             <div class="mb-3">
-                <label>Span</label>
+                <label>Phrase 2 (Continuation of Phrase 1)</label>
                 <input type="text" name="Span" class="form-control" required>
             </div>
             <div class="mb-3">
-                <label>Text</label>
+                <label>Description</label>
                 <input type="text" name="Text" class="form-control" required>
             </div>
             <div class="mb-3">

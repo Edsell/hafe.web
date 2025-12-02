@@ -36,7 +36,7 @@ $titledParas= $paragraphs->where('AboutID', optional($about)->id)->whereNotNull(
 
                         {{-- Short lead from DB --}}
                         @if(!empty($about->Details))
-                        <span class="d-block mb-10">{!! nl2br(e(Str::limit($about->Details, 240))) !!}</span>
+                        <span class="d-block mb-10">{!! $about->Details !!}</span>
                         @endif
 
                         {{-- Free-form intro paragraphs (no SubTitle) --}}
