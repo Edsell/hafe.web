@@ -1,7 +1,7 @@
 
    <!-- JS here -->
-   <script src="{{ asset('assets/js/vendor/jquery.js') }}"></script>
-   <script src="{{ asset('assets/js/vendor/waypoints.js') }}"></script>
+   <script src="{{ asset('assets/js/vendingh/jquery.js') }}"></script>
+   <script src="{{ asset('assets/js/vendingh/waypoints.js') }}"></script>
    <script src="{{ asset('assets/js/bootstrap-bundle.js') }}"></script>
    <script src="{{ asset('assets/js/meanmenu.js') }}"></script>
    <script src="{{ asset('assets/js/swiper-bundle.js') }}"></script>

@@ -61,6 +61,12 @@
    <link rel="stylesheet" href="{{ asset('assets/css/font-awesome-pro.css') }}">
    <link rel="stylesheet" href="{{ asset('assets/css/spacing.css') }}">
    <link rel="stylesheet" href="{{ asset('assets/css/main.css') }}">
+
+   <div class="gtranslate_wrapper"></div>
+   <script>window.gtranslateSettings = {"default_language":"en","languages":["en","sw"],"wrapper_selector":".gtranslate_wrapper"}</script>
+   <script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+
+
 </head>
 
 <body>

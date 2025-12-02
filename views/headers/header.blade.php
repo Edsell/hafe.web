@@ -29,12 +29,12 @@
       href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet" />
 
-    <link rel="stylesheet" href="{{ asset('bootstrap/assets/vendor/fonts/iconify-icons.css')}}" />
+    <link rel="stylesheet" href="{{ asset('bootstrap/assets/vending/fonts/iconify-icons.css')}}" />
 
-    <link rel="stylesheet" href="{{ asset('bootstrap/assets/vendor/css/core.css')}}" />
+    <link rel="stylesheet" href="{{ asset('bootstrap/assets/vending/css/core.css')}}" />
     <link rel="stylesheet" href="{{ asset('bootstrap/assets/css/demo.css')}}" />
 
-    <link rel="stylesheet" href="{{ asset('bootstrap/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css')}}" />
+    <link rel="stylesheet" href="{{ asset('bootstrap/assets/vending/libs/perfect-scrollbar/perfect-scrollbar.css')}}" />
 
     <link rel="stylesheet" href="{{ asset('bootstrap/assets/css/custom.css') }}">
 
@@ -44,7 +44,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sceditor@3/minified/formats/xhtml.min.js"></script>
 
 
-    <script src="{{ asset('bootstrap/assets/vendor/js/helpers.js')}}"></script>
+    <script src="{{ asset('bootstrap/assets/vending/js/helpers.js')}}"></script>
 
     <script src="{{ asset('bootstrap/assets/js/config.js')}}"></script>
   </head>
