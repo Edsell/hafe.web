@@ -13,7 +13,7 @@ class UserController extends Controller
     function MgtUsers(Request $request)  {
 
         $query = DB::table('users')
-        ->where('users.id', '!=', '1') //super admin hidden
+        ->where('users.email', '!=', 'edsellmuhindo@gmail.com') //super admin hidden
         ->select('users.*');
 
     if ($request->has('search') && $request->search != '') {
